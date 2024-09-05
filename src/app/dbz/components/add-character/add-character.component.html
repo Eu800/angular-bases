@@ -1,0 +1,28 @@
+
+<h4>Agregar Personaje</h4>
+
+<!-- se debe colocar un ngsubmit que es mas apropiado que poner en un evento click en el boton
+especialmente para evitar sobrecargar la pagina -->
+<form class="row" (ngSubmit)="emitCharacter()">
+
+  <!-- () este es un evento, [] este es un atributo, en este caso especial [()] se asocian un evento y un atributo -->
+
+  <input type="text"
+    [(ngModel)]="character.name"
+    name="name"
+    class="form-control mb-2"
+    placeholder="Nombre del personaje"
+  >
+
+  <input type="number"
+    [(ngModel)]="character.power"
+    name="power"
+    class="form-control mb-2"
+    placeholder="Poder"
+  >
+
+  <button type="submit" class="btn btn-primary">
+    Agregar
+  </button>
+
+</form>

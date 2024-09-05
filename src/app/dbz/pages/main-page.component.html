@@ -1,0 +1,19 @@
+
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <dbz-list [characterList]="characters" (emitId)="onDeleteCharacter($event)"></dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <!-- izquierda la funcion que emite el componente y derecha la funcion que recibe la info del componente osea el placeholder
+    el event nombre especializado que da a ha entender el tipo de objeto que se recibe, en este caso character -->
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)"></dbz-add-character>
+
+  </div>
+</div>
